@@ -1,0 +1,17 @@
+server:
+    port: 9761
+    #测试环境、开发环境可以关闭自我保护机制，保证服务不可用时及时剔除
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 2000
+eureka:
+    instance:
+        hostname: localhost
+    client:
+        #通过eureka.client.registerWithEureka：false和fetchRegistry：false来表明自己是一个eureka server.（是否将自己注册到Eureka服务中,集群的时候为true）
+        registerWithEureka: true
+        fetchRegistry: true
+        serviceUrl:
+            defaultZone: http://${eureka.instance.hostname}:8761/eureka/
+spring:
+    application:
+        name: demo-server-two

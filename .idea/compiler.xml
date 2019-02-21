@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="demo-client" />
+        <module name="demo-config-client" />
+        <module name="demo-config-server" />
+        <module name="demo-feign" />
+        <module name="demo-ribbon" />
+        <module name="demo-server" />
+        <module name="demo-server-two" />
+        <module name="demo-zuul" />
+        <module name="spring-could" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="springcould" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

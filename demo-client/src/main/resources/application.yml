@@ -1,0 +1,21 @@
+server:
+    port: 8762
+
+spring:
+    application:
+        name: demo-client
+
+eureka:
+    instance:
+        hostname: localhost
+        perferIpAddress: true
+        prefer-ip-address: true
+        ip-address: 127.0.0.1
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka/,http://localhost:9761/eureka/
+            ###因为该应用为服务提供者，是eureka的一个客户端，需要注册到注册中心
+            register-with-eureka: true
+            ###是否需要从eureka上检索服务
+            fetch-registry: true
+
